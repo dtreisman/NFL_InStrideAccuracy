@@ -655,7 +655,7 @@ metric_CPOE_plots_combo <- o_diff_CPOE_plot + a_diff_CPOE_plot + s_diff_CPOE_plo
 
 ggsave("metric_CPOE_plots_combo.png", metric_CPOE_plots_combo, width = 15, height = 6)
 
-# Metric vs. YAC diff Plots ####
+# Metric vs. xYAC diff Plots ####
 
 # o_diff vs yac
 rsq_o_yac_diff <- round(cor(by_QB$o_diff_oe, by_QB$adj_yac_diff, use = "complete.obs")**2, 3)
@@ -669,11 +669,11 @@ o_diff_yac_diff_plot <- by_QB %>%
   scale_size_continuous(breaks = seq(0, 600, by = 100), range = c(2, 5), 
                         name = "Number\nof Passes") +
   theme_light() +
-  labs(title = "Effect of **Orientation** Difference on YAC Difference",
+  labs(title = "Effect of **Orientation** Difference on xYAC Difference",
        subtitle = paste0("Min. 150 passes, R-Squared: ", rsq_o_yac_diff),
        #caption = "Plot: **@DaniTreisman** | Data: 2021 Big Data Bowl",
        x = "Average **Actual** - **Expected** Absolute Orientation Difference",
-       y = "Average Yards After Catch Difference")+
+       y = "Average xYAC Difference")+
   theme(axis.title.x = element_markdown(),
         axis.title.y = element_markdown(),
         plot.caption = element_markdown(),
@@ -704,11 +704,11 @@ a_diff_yac_diff_plot <- by_QB %>%
   scale_size_continuous(breaks = seq(0, 600, by = 100), range = c(2, 5), 
                         name = "Number of Passes") +
   theme_light() +
-  labs(title = "Effect of **Acceleration** Difference on YAC Difference",
+  labs(title = "Effect of **Acceleration** Difference on xYAC Difference",
        subtitle = paste0("Min. 150 passes, R-Squared: ", rsq_a_yac_diff),
        #caption = "Plot: **@DaniTreisman** | Data: 2021 Big Data Bowl",
        x = "Average **Actual** - **Expected** Acceleration Difference",
-       y = "Average Yards After Catch Difference")+
+       y = "Average xYAC Difference")+
   theme(axis.title.x = element_markdown(),
         axis.title.y = element_markdown(),
         plot.caption = element_markdown(),
@@ -733,11 +733,11 @@ s_diff_yac_diff_plot <- by_QB %>%
   scale_size_continuous(breaks = seq(0, 600, by = 100), range = c(2, 5), 
                         name = "Number\nof Passes") +
   theme_light() +
-  labs(title = "Effect of **Speed** Difference on YAC Difference",
+  labs(title = "Effect of **Speed** Difference on xYAC Difference",
        subtitle = paste0("Min. 150 passes, R-Squared: ", rsq_s_yac_diff),
        #caption = "Plot: **@DaniTreisman** | Data: 2021 Big Data Bowl",
        x = "Average **Actual** - **Expected** Speed Difference",
-       y = "Average Yards After Catch Difference")+
+       y = "Average xYAC Difference")+
   theme(axis.title.x = element_markdown(),
         axis.title.y = element_markdown(),
         plot.caption = element_markdown(),
@@ -854,7 +854,7 @@ all_metrics_table <- by_QB %>%
              a_diff_oe = "ADOE",
              o_diff_oe = "ODOE",
              mean_yac_oe = "YACOE",
-             adj_yac_diff = "YAC Diff.") %>% 
+             adj_yac_diff = "xYAC Diff.") %>% 
   data_color(
     columns = 2,
     colors = scales::col_numeric(
