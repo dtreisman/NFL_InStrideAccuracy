@@ -846,7 +846,7 @@ all_metrics_table <- by_QB %>%
   arrange(-s_diff_oe) %>%
   gt() %>%
   tab_options(heading.title.font.weight = "italic") %>%
-  tab_header(title = md("**In-Stride and Play-Outcome Metrics for NFL QBs in 2020**"),
+  tab_header(title = md("**In-Stride and Play-Outcome Metrics for NFL QBs in 2018**"),
              subtitle = md("<span style = 'color:darkblue;'><b>Better</b></span> <span> <b>|</b> </span> <span style = 'color:darkred;'><b>Worse</b></span>")) %>%
   opt_row_striping() %>%
   cols_label(displayName = "QB",
