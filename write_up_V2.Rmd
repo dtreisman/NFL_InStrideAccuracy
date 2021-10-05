@@ -122,9 +122,6 @@ This analysis also lacks an evaluation of the contribution of receivers to *in-s
 The last, and most obvious, shortcoming of this analysis is the limited sample size. My hope is that over time, more tracking data is released to further influence the creation of these advanced evaluation methods.
 
 > Data: [NFL Big Data Bowl 2021](https://www.kaggle.com/c/nfl-big-data-bowl-2021) and [Bonus Data](https://www.kaggle.com/tombliss/nfl-big-data-bowl-2021-bonus)\
-> Code: [github.com/dtreisman/NFL_InStrideAccuracy](https://github.com/dtreisman/NFL_InStrideAccuracy)\
-> LinkedIn: [linkedin.com/in/dani-treisman](https://www.linkedin.com/in/dani-treisman/)\
-> Twitter: [twitter.com/DaniTreisman](https://twitter.com/DaniTreisman)\
-> Website: [dtreisman.github.io/Portfolio](https://dtreisman.github.io/Portfolio/)
+
 
 ![All metrics for QBs with a minimum of 150 passes.](all_metrics_Table.png){width="279"}
