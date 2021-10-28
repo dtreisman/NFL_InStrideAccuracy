@@ -1,5 +1,6 @@
 ---
 title: "An Analysis of Quarterback Ability to Hit Receivers In-Stride Using NFL Player Tracking Data"
+author: "Dani Treisman"
 abstract: |-
  
  This report is an investigation into the ability of NFL quarterbacks to hit receivers *in-stride*. This 'ability' is defined here as the quarterback's skill in preventing extreme orientation, acceleration, and speed changes for the receiver (i.e. back-shoulder catches), from the moment of the throw to the moment the pass arrives at the receiver. This work provides a starting point for more specific methods of quarterback evaluation using frame-level player tracking data and provides evidence that quarterbacks to do have some ability to hit receivers in-stride. The main findings in this paper are: 1) the aggregated (by QB) *observed-expected* values for receiver Acceleration Difference Over Expected correlate moderately with average Completion Probability Over Expected (CPOE), 2) Average (by QB) receiver Speed Difference Over Expected and Yards After Catch difference from pass forward to pass arrival (xYAC Difference) are highly correlated, and 3) average Acceleration and Speed differences Over Expected are stable for QBs within-season.  
@@ -79,7 +80,7 @@ In theory, a throw that arrives slightly behind the receiver will make them turn
 
 Figure 5 shows the relationship between the average *in-stride* metric for each QB and their average YACOE. I only included quarterbacks with a minimum of 150 passes but there does still seem to be some noise and outliers in the results. At best, there might be some effect of ADOE on YACOE but the R^2^ is only 0.013, meaning only 1.3% of the variability in YACOE can be attributed to the variability in ADOE.
 
-![Aggregated metrics for NFL QBs against their average *YACOE*. Speed has the strongest effect with an R^2^ of **0.056**](metric_YAC_plots_combo.png)
+![Aggregated metrics for NFL QBs against their average *YACOE*. Acceleration has the strongest effect with an R^2^ of **0.013**.](metric_YAC_plots_combo.png)
 
 The sample size is only a season (and only between 150 and 600 passes per QB), so the aggregated values do have some noise, but overall, there does not seem to be a relationship between each *in-stride* metric and YACOE. YACOE is likely a result of other factors such as *receiver* ability and scheme. This analysis shows, however, that there is no evidence that a quarterback's ability to hit a receiver *in-stride* affects YACOE.
 
@@ -111,7 +112,7 @@ The last part of evaluating these three *in-stride* metrics is checking their st
 
 # 5. Conclusion
 
-Pass accuracy is one of the most important facets of the evaluation quarterbacks. Until recently, the main methods of evaluating accuracy were completion percentage and CPOE. With competitions such as the NFL's Big Data Bowl giving public access to player tracking data, it is now possible to go deeper into the analysis of quarterback accuracy. Instead of just looking at the results of plays, we can now look at the fine details, frame-by-frame, and see what separates average quarterbacks from the elite. 
+Pass accuracy is one of the most important facets of the evaluation quarterbacks. Until recently, the main methods of evaluating accuracy were completion percentage and CPOE. With competitions such as the NFL's Big Data Bowl giving public access to player tracking data, it is now possible to go deeper into the analysis of quarterback accuracy. Instead of just looking at the results of plays, we can now look at the fine details, frame-by-frame, and see what separates average quarterbacks from the elite.
 
 In this report, I created three metrics to evaluate the skill of quarterbacks at hitting the target receiver *in-stride*. Two out of three metrics were stable within a season, ADOE and SDOE. None of the metrics appear correlated with YACOE, which may not be the most interesting finding, but is significant. ADOE has a moderate correlation with CPOE, and ODOE and SDOE possible have very small correlations to CPOE as well. Lastly, SDOE is strongly correlated with the average xYAC Difference from pass-forward to pass-arrival. Figure 9 shows all *in-stride* metrics and all pass-outcome metrics for each QB with a minimum of 150 passes. All metrics are per-play averages.
 
@@ -122,6 +123,9 @@ This analysis also lacks an evaluation of the contribution of receivers to *in-s
 The last, and most obvious, shortcoming of this analysis is the limited sample size. My hope is that over time, more tracking data is released to further influence the creation of these advanced evaluation methods.
 
 > Data: [NFL Big Data Bowl 2021](https://www.kaggle.com/c/nfl-big-data-bowl-2021) and [Bonus Data](https://www.kaggle.com/tombliss/nfl-big-data-bowl-2021-bonus)\
-
+> Code: [github.com/dtreisman/NFL_InStrideAccuracy](https://github.com/dtreisman/NFL_InStrideAccuracy)\
+> LinkedIn: [linkedin.com/in/dani-treisman](https://www.linkedin.com/in/dani-treisman/)\
+> Twitter: [twitter.com/DaniTreisman](https://twitter.com/DaniTreisman)\
+> Website: [dtreisman.github.io/Portfolio](https://dtreisman.github.io/Portfolio/)
 
 ![All metrics for QBs with a minimum of 150 passes.](all_metrics_Table.png){width="279"}
