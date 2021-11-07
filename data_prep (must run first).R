@@ -86,9 +86,9 @@ pass_forward_arrived <- pbp %>%
   mutate(o_diff = ifelse(event == "pass_arrived", 
                          abs(lag(o)-o), NA),
          a_diff = ifelse(event == "pass_arrived", 
-                         abs(lag(a)-a), NA),
+                         lag(a)-a, NA),
          s_diff = ifelse(event == "pass_arrived", 
-                         abs(lag(s)-s), NA)) 
+                         lag(s)-s, NA)) 
 # 
 # pbp %>%
 #   left_join(targets, by = c("gameId", "playId")) %>%
